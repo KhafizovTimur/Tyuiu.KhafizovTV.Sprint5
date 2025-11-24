@@ -16,7 +16,7 @@ namespace Tyuiu.KhafizovTV.Sprint5.Task1.V19.Lib
             {
                 double fx = 0.0;
 
-                double denominator = (3 * x) + 0.5;
+                double denominator = 3 * x + 0.5;
 
                 if (denominator == 0)
                 {
@@ -28,7 +28,7 @@ namespace Tyuiu.KhafizovTV.Sprint5.Task1.V19.Lib
                 }
 
                 fx = Math.Round(fx, 2);
-                fileContent += fx.ToString(CultureInfo.InvariantCulture) + "\n";
+                fileContent += fx.ToString(CultureInfo.GetCultureInfo("ru-RU")) + "\n";
             }
 
             File.WriteAllText(filePath, fileContent);
