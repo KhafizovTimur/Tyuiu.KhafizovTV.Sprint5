@@ -11,7 +11,7 @@ namespace Tyuiu.KhafizovTV.Sprint5.Task3.V12.Lib
             string fileName = "OutPutFileTask3.bin";
             string filePath = Path.Combine(tempPath, fileName);
 
-            double y = Math.Round(Math.Pow(x, 3) / Math.Pow(2 * (x + 5),2), 3);
+            double y = Math.Round(Math.Pow(x, 3) / 2 * Math.Pow(x + 5,2), 3);
 
             byte[] binData = BitConverter.GetBytes(y);
 
