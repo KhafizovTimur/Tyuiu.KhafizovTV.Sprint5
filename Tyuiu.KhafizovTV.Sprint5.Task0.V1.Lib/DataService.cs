@@ -8,7 +8,7 @@ namespace Tyuiu.KhafizovTV.Sprint5.Task0.V1.Lib
         public string SaveToFileTextData(int x)
         {
             string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
-            double exp = (Math.Pow(x, 3) + Math.Pow(x, 2) + (5 * x) + 4);
+            double exp = (Math.Pow(x, 3) + 2 * Math.Pow(x, 2) + (5 * x) + 4);
             exp = Math.Round(exp, 3);
             string res = exp.ToString(CultureInfo.GetCultureInfo("ru-RU"));
             File.WriteAllText(path, res);
