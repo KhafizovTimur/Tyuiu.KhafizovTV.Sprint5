@@ -9,15 +9,12 @@ namespace Tyuiu.KhafizovTV.Sprint5.Task7.V16.Lib
         public string LoadDataAndSave(string path)
         {
             string content = File.ReadAllText(path);
-            string result = Regex.Replace(content, @"\b\w{2}\b", "XY");
+            string pattern = @"\b\S{2}\b";
+            string result = Regex.Replace(content, pattern, "XY");
+            string outputPath = @"C:\DataSprint5\OutPutDataFileTask7V16.txt";
+            File.WriteAllText(outputPath, result);
 
-            string outputFilePath = Path.Combine(
-                Directory.GetCurrentDirectory(),
-                "OutPutDataFileTask7V16.txt"
-            );
-
-            File.WriteAllText(outputFilePath, result);
-            return outputFilePath;
+            return outputPath;
         }
     }
 }
