@@ -10,7 +10,12 @@ namespace Tyuiu.KhafizovTV.Sprint5.Task7.V16.Lib
         {
             string content = File.ReadAllText(path);
             string result = Regex.Replace(content, @"\b\w{2}\b", "XY");
-            string outputFilePath = Path.Combine(Path.GetDirectoryName(path)!, "OutPutDataFileTask7V16.txt");
+
+            string outputFilePath = Path.Combine(
+                Directory.GetCurrentDirectory(),
+                "OutPutDataFileTask7V16.txt"
+            );
+
             File.WriteAllText(outputFilePath, result);
             return outputFilePath;
         }
