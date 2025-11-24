@@ -23,7 +23,7 @@ namespace Tyuiu.KhafizovTV.Sprint5.Task1.V19.Test
             Assert.AreEqual(11, lines.Length);
 
             double firstValue = double.Parse(lines[0], CultureInfo.InvariantCulture);
-            Assert.AreEqual(-4.85, firstValue, 0.01);
+            Assert.AreEqual(6.49, firstValue, 0.01);
         }
     }
 }

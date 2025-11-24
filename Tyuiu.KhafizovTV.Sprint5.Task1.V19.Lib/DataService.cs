@@ -16,7 +16,7 @@ namespace Tyuiu.KhafizovTV.Sprint5.Task1.V19.Lib
             {
                 double fx = 0.0;
 
-                double denominator = 3 * x + 0.5;
+                double denominator = (3 * x) + 0.5;
 
                 if (denominator == 0)
                 {
@@ -24,7 +24,7 @@ namespace Tyuiu.KhafizovTV.Sprint5.Task1.V19.Lib
                 }
                 else
                 {
-                    fx = Math.Sin(x) + 2 / denominator + 2 * Math.Cos(x) * 2 * x;
+                    fx = Math.Sin(x) + 2 / denominator - 4 * Math.Cos(x) * x;
                 }
 
                 fx = Math.Round(fx, 2);
